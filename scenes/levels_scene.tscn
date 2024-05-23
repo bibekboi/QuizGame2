@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckf51k0rhjl7e"]
+[gd_scene load_steps=20 format=3 uid="uid://ckf51k0rhjl7e"]
 
 [ext_resource type="Texture2D" uid="uid://cbaiuitkfrw6b" path="res://assets/BG.png" id="1_jpsqn"]
+[ext_resource type="Script" path="res://scripts/levels_scene.gd" id="1_ky2h2"]
 [ext_resource type="Texture2D" uid="uid://bagmv7km5vu0p" path="res://assets/1.png" id="1_v5w4t"]
 [ext_resource type="Texture2D" uid="uid://bit8cbdirrs8u" path="res://assets/1_Pressed.png" id="2_iqycq"]
 [ext_resource type="Texture2D" uid="uid://dh1emwqdvfge6" path="res://assets/2.png" id="3_tj2hx"]
@@ -17,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dxhfvjf38owam" path="res://assets/7_Pressed.png" id="14_51g2r"]
 [ext_resource type="Texture2D" uid="uid://ddmiwctvpg8ud" path="res://assets/8.png" id="15_tdfjw"]
 [ext_resource type="Texture2D" uid="uid://b0yncauo2tfpp" path="res://assets/8_Pressed.png" id="16_pqhuy"]
+[ext_resource type="Texture2D" uid="uid://du0llm6nj6n7m" path="res://assets/Cross.png" id="18_2vc7b"]
 
 [node name="LevelsScene" type="Control"]
 layout_mode = 3
@@ -26,6 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(137, -134)
+script = ExtResource("1_ky2h2")
 
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(283, 480)
@@ -119,3 +122,30 @@ texture_normal = ExtResource("15_tdfjw")
 texture_pressed = ExtResource("16_pqhuy")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Cross" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 194.0
+offset_top = -465.0
+offset_right = 254.0
+offset_bottom = -404.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("18_2vc7b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="1" to="." method="_on_one_pressed"]
+[connection signal="pressed" from="2" to="." method="_on_two_pressed"]
+[connection signal="pressed" from="3" to="." method="_on_three_pressed"]
+[connection signal="pressed" from="4" to="." method="_on_four_pressed"]
+[connection signal="pressed" from="5" to="." method="_on_five_pressed"]
+[connection signal="pressed" from="6" to="." method="_on_six_pressed"]
+[connection signal="pressed" from="7" to="." method="_on_seven_pressed"]
+[connection signal="pressed" from="8" to="." method="_on_eight_pressed"]
+[connection signal="pressed" from="Cross" to="." method="_on_cross_pressed"]

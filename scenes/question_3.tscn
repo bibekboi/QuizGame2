@@ -1,19 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://cc3k2kn15yp1d"]
+[gd_scene load_steps=11 format=3 uid="uid://ckqu1nx8gmb8k"]
 
-[ext_resource type="Script" path="res://scripts/question_1.gd" id="1_dwx7x"]
-[ext_resource type="Texture2D" uid="uid://cbaiuitkfrw6b" path="res://assets/BG.png" id="1_j5hea"]
-[ext_resource type="Texture2D" uid="uid://du0llm6nj6n7m" path="res://assets/Cross.png" id="2_4i3ip"]
-[ext_resource type="Texture2D" uid="uid://buqdwms4cy8u6" path="res://assets/Base.png" id="3_p7ii7"]
-[ext_resource type="FontFile" uid="uid://cytsk31gbycmn" path="res://assets/Fonts/Poppins-Bold.ttf" id="4_ndgl4"]
-[ext_resource type="Texture2D" uid="uid://b74a4v1nefxd1" path="res://assets/BlankButton.png" id="6_v70sw"]
-[ext_resource type="Texture2D" uid="uid://bjpfuufd4spsn" path="res://assets/BlankButton_Pressed.png" id="7_5mu75"]
-[ext_resource type="FontFile" uid="uid://bidjbtfjvjgsf" path="res://assets/Fonts/Poppins-ExtraBold.ttf" id="8_bunfl"]
+[ext_resource type="Script" path="res://scripts/question_1.gd" id="1_08uim"]
+[ext_resource type="Texture2D" uid="uid://cbaiuitkfrw6b" path="res://assets/BG.png" id="2_thmva"]
+[ext_resource type="Texture2D" uid="uid://du0llm6nj6n7m" path="res://assets/Cross.png" id="3_b62f1"]
+[ext_resource type="Texture2D" uid="uid://buqdwms4cy8u6" path="res://assets/Base.png" id="4_hiaot"]
+[ext_resource type="Texture2D" uid="uid://b74a4v1nefxd1" path="res://assets/BlankButton.png" id="5_86u82"]
+[ext_resource type="Texture2D" uid="uid://bjpfuufd4spsn" path="res://assets/BlankButton_Pressed.png" id="6_iq1pv"]
+[ext_resource type="FontFile" uid="uid://cytsk31gbycmn" path="res://assets/Fonts/Poppins-Bold.ttf" id="7_783d4"]
+[ext_resource type="FontFile" uid="uid://bidjbtfjvjgsf" path="res://assets/Fonts/Poppins-ExtraBold.ttf" id="8_60db1"]
 
 [sub_resource type="FontVariation" id="FontVariation_xr7ie"]
-base_font = ExtResource("4_ndgl4")
+base_font = ExtResource("7_783d4")
 
 [sub_resource type="FontVariation" id="FontVariation_q1ona"]
-base_font = ExtResource("8_bunfl")
+base_font = ExtResource("8_60db1")
 
 [node name="Question1" type="Control"]
 layout_mode = 3
@@ -22,12 +22,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_dwx7x")
+script = ExtResource("1_08uim")
+correctAnswer = 1
 
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(283, 480)
 scale = Vector2(0.51949, 0.51949)
-texture = ExtResource("1_j5hea")
+texture = ExtResource("2_thmva")
 
 [node name="Cross" type="TextureButton" parent="."]
 layout_mode = 1
@@ -42,7 +43,7 @@ offset_right = 254.0
 offset_bottom = -404.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_4i3ip")
+texture_normal = ExtResource("3_b62f1")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -59,7 +60,7 @@ offset_right = 216.5
 offset_bottom = 365.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_p7ii7")
+texture = ExtResource("4_hiaot")
 expand_mode = 1
 
 [node name="Answer1" type="TextureButton" parent="Base"]
@@ -75,8 +76,8 @@ offset_right = 132.0
 offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("6_v70sw")
-texture_pressed = ExtResource("7_5mu75")
+texture_normal = ExtResource("5_86u82")
+texture_pressed = ExtResource("6_iq1pv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -89,7 +90,7 @@ offset_bottom = 65.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_xr7ie")
 theme_override_font_sizes/font_size = 30
-text = "Kathmandu"
+text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -108,8 +109,8 @@ offset_right = 132.0
 offset_bottom = 19.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("6_v70sw")
-texture_pressed = ExtResource("7_5mu75")
+texture_normal = ExtResource("5_86u82")
+texture_pressed = ExtResource("6_iq1pv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -121,7 +122,7 @@ offset_bottom = 63.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_xr7ie")
 theme_override_font_sizes/font_size = 30
-text = "Lalitpur"
+text = "B"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -140,8 +141,8 @@ offset_right = 132.0
 offset_bottom = 127.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("6_v70sw")
-texture_pressed = ExtResource("7_5mu75")
+texture_normal = ExtResource("5_86u82")
+texture_pressed = ExtResource("6_iq1pv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -153,7 +154,7 @@ offset_bottom = 63.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_xr7ie")
 theme_override_font_sizes/font_size = 30
-text = "Bhaktapur"
+text = "M"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -166,7 +167,7 @@ offset_bottom = 371.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_q1ona")
 theme_override_font_sizes/font_size = 50
-text = "What is the capital of Nepal?"
+text = "What letter comes after A?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
