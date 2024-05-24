@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Question1="res://scripts/question_1.gd"
+
 [display]
 
 window/size/viewport_width=540
