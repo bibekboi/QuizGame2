@@ -292,6 +292,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ScoreText" type="Label" parent="NextButton"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 7.0
 offset_right = 184.0

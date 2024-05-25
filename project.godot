@@ -25,3 +25,5 @@ Global="*res://scripts/global.gd"
 
 window/size/viewport_width=540
 window/size/viewport_height=960
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
