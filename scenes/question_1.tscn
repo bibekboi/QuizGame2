@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cc3k2kn15yp1d"]
+[gd_scene load_steps=15 format=3 uid="uid://cc3k2kn15yp1d"]
 
 [ext_resource type="Script" path="res://scripts/question_1.gd" id="1_dwx7x"]
 [ext_resource type="Texture2D" uid="uid://cbaiuitkfrw6b" path="res://assets/BG.png" id="1_j5hea"]
@@ -10,12 +10,16 @@
 [ext_resource type="FontFile" uid="uid://bidjbtfjvjgsf" path="res://assets/Fonts/Poppins-ExtraBold.ttf" id="8_bunfl"]
 [ext_resource type="Texture2D" uid="uid://bumfji6y1v80d" path="res://assets/Correct.png" id="9_vpyry"]
 [ext_resource type="Texture2D" uid="uid://bwqdhnvqfj0t7" path="res://assets/Incorrect.png" id="10_g0dlw"]
+[ext_resource type="FontFile" uid="uid://bh2xwsdxt3nyk" path="res://assets/Fonts/Poppins-Black.ttf" id="11_eu8kl"]
 
 [sub_resource type="FontVariation" id="FontVariation_xr7ie"]
 base_font = ExtResource("4_ndgl4")
 
 [sub_resource type="FontVariation" id="FontVariation_q1ona"]
 base_font = ExtResource("8_bunfl")
+
+[sub_resource type="FontVariation" id="FontVariation_auf8i"]
+base_font = ExtResource("11_eu8kl")
 
 [node name="Question1" type="Control"]
 layout_mode = 3
@@ -56,9 +60,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -216.5
-offset_top = -148.0
+offset_top = -205.0
 offset_right = 216.5
-offset_bottom = 365.0
+offset_bottom = 308.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_p7ii7")
@@ -163,8 +167,9 @@ uppercase = true
 
 [node name="Question" type="Label" parent="."]
 layout_mode = 0
+offset_top = 72.0
 offset_right = 539.0
-offset_bottom = 371.0
+offset_bottom = 280.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_q1ona")
 theme_override_font_sizes/font_size = 50
@@ -195,9 +200,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -168.5
-offset_top = -199.0
+offset_top = -267.0
 offset_right = 168.5
-offset_bottom = 199.0
+offset_bottom = 131.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("9_vpyry")
@@ -211,9 +216,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 110.0
-offset_top = -205.0
+offset_top = -273.0
 offset_right = 170.0
-offset_bottom = -144.0
+offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("2_4i3ip")
@@ -242,9 +247,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -168.5
-offset_top = -199.0
+offset_top = -261.0
 offset_right = 168.5
-offset_bottom = 199.0
+offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_g0dlw")
@@ -258,30 +263,72 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 110.0
-offset_top = -205.0
+offset_top = -273.0
 offset_right = 170.0
-offset_bottom = -144.0
+offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("2_4i3ip")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ScoreCounter_TEXT" type="Label" parent="."]
+[node name="NextButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = 156.0
+offset_right = 99.0
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_v70sw")
+texture_pressed = ExtResource("7_5mu75")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ScoreText" type="Label" parent="NextButton"]
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 184.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.513726, 0.243137, 0.160784, 1)
+theme_override_fonts/font = SubResource("FontVariation_auf8i")
+theme_override_font_sizes/font_size = 30
+text = "NEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreBase" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -117.0
-offset_top = -72.0
-offset_right = 117.0
+offset_left = -112.0
+offset_top = -128.0
+offset_right = 112.0
+offset_bottom = -61.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "SCORE TEXT HERE"
+texture = ExtResource("7_5mu75")
+expand_mode = 1
+
+[node name="ScoreText" type="Label" parent="ScoreBase"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 217.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.513726, 0.243137, 0.160784, 1)
+theme_override_fonts/font = SubResource("FontVariation_auf8i")
+theme_override_font_sizes/font_size = 30
+text = "Score:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -291,3 +338,4 @@ vertical_alignment = 1
 [connection signal="button_down" from="Base/Answer3" to="." method="_on_answer_3_button_down"]
 [connection signal="pressed" from="CorrectAnswer/Cross2" to="." method="_on_cross_pressed"]
 [connection signal="pressed" from="IncorrectAnswer/Cross2" to="." method="_on_cross_pressed"]
+[connection signal="button_down" from="NextButton" to="." method="_on_next_button_button_down"]

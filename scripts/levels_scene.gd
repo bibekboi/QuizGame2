@@ -14,7 +14,7 @@ func _on_three_pressed():
 
 
 func _on_four_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/question_4.tscn")
 
 
 func _on_five_pressed():

@@ -1,25 +1,25 @@
-[gd_scene load_steps=15 format=3 uid="uid://wonadmdx4j74"]
+[gd_scene load_steps=15 format=3 uid="uid://dm3bwcv315dwc"]
 
-[ext_resource type="Script" path="res://scripts/question_1.gd" id="1_jwgmx"]
-[ext_resource type="Texture2D" uid="uid://cbaiuitkfrw6b" path="res://assets/BG.png" id="2_8fanq"]
-[ext_resource type="Texture2D" uid="uid://du0llm6nj6n7m" path="res://assets/Cross.png" id="3_5bxs4"]
-[ext_resource type="Texture2D" uid="uid://buqdwms4cy8u6" path="res://assets/Base.png" id="4_8wukm"]
-[ext_resource type="Texture2D" uid="uid://b74a4v1nefxd1" path="res://assets/BlankButton.png" id="5_sx7n4"]
-[ext_resource type="Texture2D" uid="uid://bjpfuufd4spsn" path="res://assets/BlankButton_Pressed.png" id="6_tf34s"]
-[ext_resource type="FontFile" uid="uid://cytsk31gbycmn" path="res://assets/Fonts/Poppins-Bold.ttf" id="7_8kaq8"]
-[ext_resource type="FontFile" uid="uid://bidjbtfjvjgsf" path="res://assets/Fonts/Poppins-ExtraBold.ttf" id="8_b3ltx"]
-[ext_resource type="Texture2D" uid="uid://bumfji6y1v80d" path="res://assets/Correct.png" id="9_vh1e1"]
-[ext_resource type="Texture2D" uid="uid://bwqdhnvqfj0t7" path="res://assets/Incorrect.png" id="10_cuypm"]
-[ext_resource type="FontFile" uid="uid://bh2xwsdxt3nyk" path="res://assets/Fonts/Poppins-Black.ttf" id="11_o4ufy"]
+[ext_resource type="Script" path="res://scripts/question_1.gd" id="1_65yms"]
+[ext_resource type="Texture2D" uid="uid://cbaiuitkfrw6b" path="res://assets/BG.png" id="2_a4o2q"]
+[ext_resource type="Texture2D" uid="uid://du0llm6nj6n7m" path="res://assets/Cross.png" id="3_7607w"]
+[ext_resource type="Texture2D" uid="uid://buqdwms4cy8u6" path="res://assets/Base.png" id="4_s3058"]
+[ext_resource type="Texture2D" uid="uid://b74a4v1nefxd1" path="res://assets/BlankButton.png" id="5_tg2u4"]
+[ext_resource type="Texture2D" uid="uid://bjpfuufd4spsn" path="res://assets/BlankButton_Pressed.png" id="6_b1v76"]
+[ext_resource type="FontFile" uid="uid://cytsk31gbycmn" path="res://assets/Fonts/Poppins-Bold.ttf" id="7_05el3"]
+[ext_resource type="FontFile" uid="uid://bidjbtfjvjgsf" path="res://assets/Fonts/Poppins-ExtraBold.ttf" id="8_oms5g"]
+[ext_resource type="Texture2D" uid="uid://bumfji6y1v80d" path="res://assets/Correct.png" id="9_yqp6i"]
+[ext_resource type="Texture2D" uid="uid://bwqdhnvqfj0t7" path="res://assets/Incorrect.png" id="10_o1fgx"]
+[ext_resource type="FontFile" uid="uid://bh2xwsdxt3nyk" path="res://assets/Fonts/Poppins-Black.ttf" id="11_4844w"]
 
 [sub_resource type="FontVariation" id="FontVariation_xr7ie"]
-base_font = ExtResource("7_8kaq8")
+base_font = ExtResource("7_05el3")
 
 [sub_resource type="FontVariation" id="FontVariation_q1ona"]
-base_font = ExtResource("8_b3ltx")
+base_font = ExtResource("8_oms5g")
 
 [sub_resource type="FontVariation" id="FontVariation_auf8i"]
-base_font = ExtResource("11_o4ufy")
+base_font = ExtResource("11_4844w")
 
 [node name="Question1" type="Control"]
 layout_mode = 3
@@ -28,13 +28,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jwgmx")
-correctAnswer = 2
+script = ExtResource("1_65yms")
 
 [node name="BG" type="Sprite2D" parent="."]
-position = Vector2(283, 480)
+position = Vector2(285, 480)
 scale = Vector2(0.51949, 0.51949)
-texture = ExtResource("2_8fanq")
+texture = ExtResource("2_a4o2q")
 
 [node name="Cross" type="TextureButton" parent="."]
 layout_mode = 1
@@ -49,7 +48,7 @@ offset_right = 254.0
 offset_bottom = -404.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("3_5bxs4")
+texture_normal = ExtResource("3_7607w")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -66,7 +65,7 @@ offset_right = 216.5
 offset_bottom = 308.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_8wukm")
+texture = ExtResource("4_s3058")
 expand_mode = 1
 
 [node name="Answer1" type="TextureButton" parent="Base"]
@@ -82,8 +81,8 @@ offset_right = 132.0
 offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("5_sx7n4")
-texture_pressed = ExtResource("6_tf34s")
+texture_normal = ExtResource("5_tg2u4")
+texture_pressed = ExtResource("6_b1v76")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -96,7 +95,7 @@ offset_bottom = 65.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_xr7ie")
 theme_override_font_sizes/font_size = 30
-text = "Chowmein"
+text = "Rohit Paudel"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -115,8 +114,8 @@ offset_right = 132.0
 offset_bottom = 19.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("5_sx7n4")
-texture_pressed = ExtResource("6_tf34s")
+texture_normal = ExtResource("5_tg2u4")
+texture_pressed = ExtResource("6_b1v76")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -128,7 +127,7 @@ offset_bottom = 63.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_xr7ie")
 theme_override_font_sizes/font_size = 30
-text = "Burger"
+text = "D. S. Airee"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -147,8 +146,8 @@ offset_right = 132.0
 offset_bottom = 127.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("5_sx7n4")
-texture_pressed = ExtResource("6_tf34s")
+texture_normal = ExtResource("5_tg2u4")
+texture_pressed = ExtResource("6_b1v76")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -159,8 +158,8 @@ offset_right = 239.0
 offset_bottom = 63.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_xr7ie")
-theme_override_font_sizes/font_size = 30
-text = "Momo"
+theme_override_font_sizes/font_size = 20
+text = "Sandeep Lamichhane"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -174,7 +173,7 @@ offset_bottom = 280.0
 theme_override_colors/font_color = Color(0.592157, 0.290196, 0.172549, 1)
 theme_override_fonts/font = SubResource("FontVariation_q1ona")
 theme_override_font_sizes/font_size = 50
-text = "What is the best food in the entire world? "
+text = "Who is the captain of Nepali Cricket Team? "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -191,7 +190,7 @@ grow_vertical = 2
 [node name="CorrectBG" type="Sprite2D" parent="CorrectAnswer"]
 position = Vector2(283, 480)
 scale = Vector2(0.51949, 0.51949)
-texture = ExtResource("2_8fanq")
+texture = ExtResource("2_a4o2q")
 
 [node name="Correct" type="TextureRect" parent="CorrectAnswer"]
 layout_mode = 1
@@ -206,7 +205,7 @@ offset_right = 168.5
 offset_bottom = 131.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("9_vh1e1")
+texture = ExtResource("9_yqp6i")
 expand_mode = 1
 
 [node name="Cross2" type="TextureButton" parent="CorrectAnswer"]
@@ -222,12 +221,11 @@ offset_right = 170.0
 offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("3_5bxs4")
+texture_normal = ExtResource("3_7607w")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="IncorrectAnswer" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -238,7 +236,7 @@ grow_vertical = 2
 [node name="CorrectBG" type="Sprite2D" parent="IncorrectAnswer"]
 position = Vector2(283, 480)
 scale = Vector2(0.51949, 0.51949)
-texture = ExtResource("2_8fanq")
+texture = ExtResource("2_a4o2q")
 
 [node name="Incorrect" type="TextureRect" parent="IncorrectAnswer"]
 layout_mode = 1
@@ -253,7 +251,7 @@ offset_right = 168.5
 offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("10_cuypm")
+texture = ExtResource("10_o1fgx")
 expand_mode = 1
 
 [node name="Cross2" type="TextureButton" parent="IncorrectAnswer"]
@@ -269,7 +267,7 @@ offset_right = 170.0
 offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("3_5bxs4")
+texture_normal = ExtResource("3_7607w")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -287,8 +285,8 @@ offset_right = 99.0
 offset_bottom = 221.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("5_sx7n4")
-texture_pressed = ExtResource("6_tf34s")
+texture_normal = ExtResource("5_tg2u4")
+texture_pressed = ExtResource("6_b1v76")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -318,7 +316,7 @@ offset_right = 112.0
 offset_bottom = -61.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("6_tf34s")
+texture = ExtResource("6_b1v76")
 expand_mode = 1
 
 [node name="ScoreText" type="Label" parent="ScoreBase"]
